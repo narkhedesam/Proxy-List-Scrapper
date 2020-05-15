@@ -76,7 +76,7 @@ class Scrapper:
 
 
 if __name__ == "__main__":
-    # By default set SSL for the parameter to get SSL Proxies
+    # By default set ALL for the parameter to get ALL Proxies
     Category = 'ALL'
 
     try:
