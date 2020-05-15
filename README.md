@@ -64,4 +64,3 @@ in data having proxies,len,category
  - https://free-proxy-list.net/
  <br/><br/>
  - http://spys.me/proxy.txt
- 
