@@ -38,7 +38,7 @@ in data having proxies,len,category
  - @len is the count of total proxies in @proxies.<br/>
  - @category is the category of proxies defined above. <br/> 
 <br/>
-#### You can handle the response data as below
+## You can handle the response data as below
 
 
     # Print These Scrapped Proxies
@@ -55,7 +55,7 @@ in data having proxies,len,category
     print(data.category)
   
 
-#### Thanks for giving free proxies we all are thankful
+### Thanks for giving free proxies we all are thankful
  - https://www.sslproxies.org/
  - https://www.google-proxy.net/
  - https://free-proxy-list.net/anonymous-proxy.html
@@ -65,6 +65,6 @@ in data having proxies,len,category
  <br/><br/>
  - http://spys.me/proxy.txt
  
- ##Screenshot is added
+##Screenshot is added
  
 ![Screenshot](Screenshot.png)
