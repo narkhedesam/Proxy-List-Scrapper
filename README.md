@@ -58,15 +58,19 @@ in data having proxies,len,category
   
 
 ### Thanks for giving free proxies we all are thankful
+
+
  - https://www.sslproxies.org/
  - https://www.google-proxy.net/
  - https://free-proxy-list.net/anonymous-proxy.html
  - https://free-proxy-list.net/uk-proxy.html
  - https://www.us-proxy.org/
  - https://free-proxy-list.net/
- <br/><br/>
  - http://spys.me/proxy.txt
 <br/><br/>
 
+
 ##Screenshot is added
+
+
 ![Screenshot](Screenshot.png)
