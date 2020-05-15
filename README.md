@@ -40,7 +40,7 @@ in data having proxies,len,category
 <br/>
 
 
-## You can handle the response data as below
+### You can handle the response data as below
 
 
     # Print These Scrapped Proxies
@@ -67,10 +67,9 @@ in data having proxies,len,category
  - https://www.us-proxy.org/
  - https://free-proxy-list.net/
  - http://spys.me/proxy.txt
-<br/><br/>
-
-
-##Screenshot is added
+ 
+ 
+### Screenshot is added
 
 
 ![Screenshot](Screenshot.png)
