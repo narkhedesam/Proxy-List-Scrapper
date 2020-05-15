@@ -38,6 +38,8 @@ in data having proxies,len,category
  - @len is the count of total proxies in @proxies.<br/>
  - @category is the category of proxies defined above. <br/> 
 <br/>
+
+
 ## You can handle the response data as below
 
 
@@ -64,7 +66,8 @@ in data having proxies,len,category
  - https://free-proxy-list.net/
  <br/><br/>
  - http://spys.me/proxy.txt
- 
+
+
 ##Screenshot is added
  
 ![Screenshot](Screenshot.png)
