@@ -17,20 +17,44 @@ class ScrapperException(BaseException):
 
 
 class Proxies(object):
+    """
+       Proxies is the response data type of getProxies function
+    """
     def __init__(self, proxies, category):
+        """
+        Initialize the proxies class
+        :param proxies: is the list of proxies.
+        :param category: is the category for proxies.
+        """
         self.proxies = proxies
         self.len = len(proxies)
         self.category = category
 
 
 class Proxy(object):
+    """
+        Proxy is the class for proxy.
+    """
     def __init__(self, ip, port):
+        """
+        Initialization of the proxy class
+        :param ip: ip address of proxy
+        :param port: port of proxy
+        """
         self.ip = ip
         self.port = port
 
 
 class Scrapper:
+    """
+    Scrapper class is use to scrape the proxies from various websites.
+    """
     def __init__(self, category='ssl', print_err_trace=True):
+        """
+        Initialization of scrapper class
+        :param category: Category of proxy to scrape.
+        :param print_err_trace: (True or False) are you required the stack trace for error's if they occured in the program
+        """
         # init with Empty Proxy List
         self.proxies = []
         self.category = category
@@ -46,6 +70,10 @@ class Scrapper:
         self.print_trace = print_err_trace
 
     def getProxies(self):
+        """
+        getProxies() gives the proxies scrapped from websites.
+        :return: the object of proxies class
+        """
         if self.Categories[self.category] == 'ALL':
             for Cat in self.Categories:
                 # Skip iteration for ALL category
@@ -63,6 +91,10 @@ class Scrapper:
         return Proxies(proxies=self.proxies, category=self.category)
 
     def _get(self):
+        """
+        _get() is the actual scrapper to scrape proxies by REGEX.
+        :return: returns the list of proxies according to the category of proxies
+        """
         try:
             r = requests.get(url=self.Categories[self.category])
             if self.category == 'SPYS.ME':
@@ -78,6 +110,12 @@ class Scrapper:
             return []
 
     def filter_proxies_remove_duplicates(self):
+        """
+        filter_proxies_remove_duplicates() is the filter for the proxy list. To get the unique proxies it just get
+        the LIST of proxies from self object convert it to SET and then convert to LIST.
+
+        :return: Update the UNIQUE LIST of proxies.
+        """
         self.proxies = list(set(self.proxies))
 
 
