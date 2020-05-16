@@ -56,6 +56,10 @@ in data having proxies,len,category
     print("Category of the Proxy")
     print(data.category)
   
+## Author 
+Sameer Narkhede <br/>
+Profile : https://github.com/narkhedesam <br/>
+Website : https://narkhedesam.github.io/ 
 
 ### Thanks for giving free proxies we all are thankful
 
