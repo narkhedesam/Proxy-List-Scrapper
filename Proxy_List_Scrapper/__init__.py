@@ -1,3 +1,9 @@
+"""
+    Date: 15-05-2020
+    Created by Sameer Narkhede
+    Project : Proxy-List-Scrapper
+"""
+
 import sys
 import traceback
 from re import findall
@@ -74,6 +80,11 @@ class Scrapper:
     def filter_proxies_remove_duplicates(self):
         self.proxies = list(set(self.proxies))
 
+
+__author__ = "Sameer Narkhede"
+__copyright__ = "Copyright (C) 2020 Sameer Narkhede"
+__license__ = "MIT LICENCE"
+__version__ = "0.1.0"
 
 if __name__ == "__main__":
     # By default set ALL for the parameter to get ALL Proxies

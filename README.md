@@ -55,11 +55,15 @@ in data having proxies,len,category
     # Print the Category of proxy from which you scrapped
     print("Category of the Proxy")
     print(data.category)
+    
+## Author 
+Sameer Narkhede <br/>
+Profile : https://github.com/narkhedesam <br/>
+Website: https://narkhedesam.github.io/ 
+ 
   
 
-### Thanks for giving free proxies we all are thankful
-
-
+### Thanks for giving free proxies
  - https://www.sslproxies.org/
  - https://www.google-proxy.net/
  - https://free-proxy-list.net/anonymous-proxy.html
@@ -71,6 +75,4 @@ in data having proxies,len,category
 
 
 ##Screenshot is added
-
-
 ![Screenshot](Screenshot.png)
