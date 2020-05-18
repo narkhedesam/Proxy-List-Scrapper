@@ -1,5 +1,9 @@
 # Proxy-List-Scrapper
-![Logo](https://raw.githubusercontent.com/narkhedesam/Proxy-List-Scrapper/master/_Proxy-List-Scrapper%20logo.jpg) <br/><br/>
+<p align="center">
+    <img width="460" height="300" src="https://raw.githubusercontent.com/narkhedesam/Proxy-List-Scrapper/master/_Proxy-List-Scrapper%20logo.jpg">
+</p>
+
+<br/><br/>
 Proxy List Scrapper from various websites. 
 They gives the free proxies for temporary use.
 
