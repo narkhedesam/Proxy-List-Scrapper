@@ -77,4 +77,4 @@ Website : https://narkhedesam.github.io/
 ## Screenshot is added
 
 
-![Screenshot](Screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/narkhedesam/Proxy-List-Scrapper/master/Screenshot.png)
