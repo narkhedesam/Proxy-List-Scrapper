@@ -8,12 +8,12 @@ with open(path.join(this_directory, 'README.md')) as f:
 
 setup(
     name='Proxy-List-Scrapper',
-    version='0.1.2',
+    version='0.1.3',
     packages=find_packages(),
     url='',
     license='MIT License',
     author='Sameer Narkhede',
-    author_email='naarkhedesam@gmail.com',
+    author_email='narkhedesam@gmail.com',
     description='proxy list scrapper from various websites. they gives the free proxies for temporary use.',
     # other arguments omitted
     long_description=long_description,
