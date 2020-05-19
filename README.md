@@ -3,7 +3,7 @@
     <img width="460" height="300" src="https://raw.githubusercontent.com/narkhedesam/Proxy-List-Scrapper/master/_Proxy-List-Scrapper%20logo.jpg">
 </p>
 
-[![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WAPWQYN4DG756)
+[![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/sameernarkhede)
 
 <br/><br/>
 Proxy List Scrapper from various websites. 
@@ -92,6 +92,6 @@ Website : https://narkhedesam.github.io/
 If this project help you reduce time to develop, you can give me a cup of coffee :relaxed: 
 <br/>
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WAPWQYN4DG756)
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/sameernarkhede)
 
  
