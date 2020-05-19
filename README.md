@@ -3,6 +3,8 @@
     <img width="460" height="300" src="https://raw.githubusercontent.com/narkhedesam/Proxy-List-Scrapper/master/_Proxy-List-Scrapper%20logo.jpg">
 </p>
 
+[![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WAPWQYN4DG756)
+
 <br/><br/>
 Proxy List Scrapper from various websites. 
 They gives the free proxies for temporary use.
@@ -34,7 +36,7 @@ Here Your need to specify category defined as below:<br/>
 These are all categories.<br/>
 After you have to call a function named "getProxies"<br/>
 
-    # Get ALl Proxies According to your Choice
+    # Get ALL Proxies According to your Choice
     data = scrapper.getProxies()
 
 the data will be returned by the above function the data is having the response data of function.<br/>
@@ -83,3 +85,13 @@ Website : https://narkhedesam.github.io/
 
 
 ![Screenshot](https://raw.githubusercontent.com/narkhedesam/Proxy-List-Scrapper/master/Screenshot.png)
+
+
+## Donation
+
+If this project help you reduce time to develop, you can give me a cup of coffee :relaxed: 
+<br/>
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WAPWQYN4DG756)
+
+ 

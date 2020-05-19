@@ -138,7 +138,7 @@ if __name__ == "__main__":
     # Initialize the Scrapper
     scrapper = Scrapper(category=Category, print_err_trace=False)
 
-    # Get ALl Proxies According to your Choice
+    # Get ALL Proxies According to your Choice
     data = scrapper.getProxies()
 
     # Print These Scrapped Proxies
