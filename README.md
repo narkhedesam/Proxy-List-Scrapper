@@ -3,14 +3,16 @@
     <img width="460" height="300" src="https://raw.githubusercontent.com/narkhedesam/Proxy-List-Scrapper/master/_Proxy-List-Scrapper%20logo.jpg">
 </p>
 
-[![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/sameernarkhede)
+[![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/sameernarkhede/250)
 
 <br/><br/>
 Proxy List Scrapper from various websites. 
 They gives the free proxies for temporary use.
 
 ## How to use
-Just Download the code and place in your project.<br/>
+You can clone this project from github. or use<br/>
+
+    pip install Proxy-List-Scrapper
  
 Make sure you have installed the requests and urllib3 in python<br/>
 
@@ -92,6 +94,6 @@ Website : https://narkhedesam.github.io/
 If this project help you reduce time to develop, you can give me a cup of coffee :relaxed: 
 <br/>
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/sameernarkhede)
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/sameernarkhede/250)
 
  
