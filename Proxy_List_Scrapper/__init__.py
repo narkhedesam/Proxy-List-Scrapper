@@ -65,6 +65,7 @@ class Scrapper:
                            'US': 'https://www.us-proxy.org/',
                            'NEW': 'https://free-proxy-list.net/',
                            'SPYS.ME': 'http://spys.me/proxy.txt',
+                           'proxyscrape': 'https://api.proxyscrape.com/?request=getproxies&proxytype=all&country=all&ssl=all&anonymity=all',
                            'ALL': 'ALL'
                            }
         self.print_trace = print_err_trace
@@ -97,7 +98,7 @@ class Scrapper:
         """
         try:
             r = requests.get(url=self.Categories[self.category])
-            if self.category == 'SPYS.ME':
+            if self.category == 'SPYS.ME' or self.category == 'proxyscrape':
                 self.proxies = findall(pattern=r'\d+\.\d+\.\d+\.\d+:\d+', string=r.text)
             else:
                 matches = findall(pattern=r'\d+\.\d+\.\d+\.\d+</td><td>\d+', string=r.text)

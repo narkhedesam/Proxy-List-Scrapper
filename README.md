@@ -33,6 +33,7 @@ Here Your need to specify category defined as below:<br/>
     'US': 'https://www.us-proxy.org/',
     'NEW': 'https://free-proxy-list.net/',
     'SPYS.ME': 'http://spys.me/proxy.txt',
+    'proxyscrape': 'https://api.proxyscrape.com/?request=getproxies&proxytype=all&country=all&ssl=all&anonymity=all',
     'ALL': 'ALL'
 
 These are all categories.<br/>
@@ -70,9 +71,7 @@ Sameer Narkhede <br/>
 Profile : https://github.com/narkhedesam <br/>
 Website : https://narkhedesam.github.io/ 
 
-### Thanks for giving free proxies we all are thankful
-
-
+### Thanks for giving free proxies
  - https://www.sslproxies.org/
  - https://www.google-proxy.net/
  - https://free-proxy-list.net/anonymous-proxy.html
@@ -80,6 +79,7 @@ Website : https://narkhedesam.github.io/
  - https://www.us-proxy.org/
  - https://free-proxy-list.net/
  - http://spys.me/proxy.txt
+ - https://proxyscrape.com/
 <br/><br/>
 
 
