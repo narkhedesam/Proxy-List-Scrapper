@@ -8,7 +8,7 @@ with open(path.join(this_directory, 'README.md')) as f:
 
 setup(
     name='Proxy-List-Scrapper',
-    version='0.1.5',
+    version='0.1.6',
     packages=find_packages(),
     url='',
     license='MIT License',
