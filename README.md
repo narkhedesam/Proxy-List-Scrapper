@@ -9,7 +9,14 @@
 Proxy List Scrapper from various websites. 
 They gives the free proxies for temporary use.
 
-## How to use
+
+## Web_Scrapper Module <a href="https://github.com/narkhedesam/Proxy-List-Scrapper/blob/master/Web_Scrapper/README.md">here</a>
+Web Scrapper is proxy web scraper using proxy rotating api https://scrape.do <br/>
+ you can check official documentation from <a href="https://docs.scrape.do/">here</a>
+ 
+<h5>You can send request to any webpages with proxy gateway & web api provided by scrape.do</h5>
+<br/><br/>
+## How to use Proxy List Scrapper
 You can clone this project from github. or use<br/>
 
     pip install Proxy-List-Scrapper
