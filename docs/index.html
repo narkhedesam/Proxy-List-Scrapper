@@ -1,0 +1,131 @@
+<!doctype html>
+<html onscroll="scroll()">
+  <head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	  <meta name="description" content="Proxy List Scrapper. Contribute to narkhedesam/Proxy-List-Scrapper development by creating an account on GitHub.">
+	  <meta name="keywords" content="proxy, freeproxy, freeproxylist, proxyscrape, proxies, scrapper, free-proxies, web-scrapper, data-mining, crawler, crawlers, web-scrapping, rotating-proxy, proxy-list">
+	<title>Proxy List Scrapper</title>
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<script src="scrapper.js"></script>
+	<script src="clipboard.min.js"></script>
+  </head>
+  <body  onscroll="scroll()">
+	<ul class="horizontal">
+	  <li><a class="active" href="#">Home</a></li>
+	  <li><a href="#home">Scrapper</a></li>
+	  <li><a href="#author">Author</a></li>
+	</ul>
+	<a href="https://github.com/narkhedesam/Proxy-List-Scrapper" class="github-corner" aria-label="View source on GitHub">
+		<svg width="80" height="80" viewBox="0 0 250 250" style="z-index: 1;fill:#64CEAA; color:#fff; position: fixed; top: 0; border: 0; right: 0;" aria-hidden="true">
+			<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+			<path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+			<path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+		</svg>
+	</a>
+	<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+	<a href="#" class="top" aria-label="Goto top">
+		<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+			<path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm18-1h-4v7h-4v-7h-4l6-6 6 6z" fill="#000"/>
+		</svg>
+	</a>
+	<style>.top {position: fixed;bottom: 20px;right: 20px;}</style>
+ 
+	<section #intro id="intro">	
+		<div class="intro" style="width: max-content;margin: auto;">
+			<img src="Proxy-List-Scrapper-logo.png">
+			<h1 class="h1-text">Proxy List Scrapper</h1>
+			<p style="color:#fff;font-family: cursive;">Proxy List Scrapper from various websites. They gives the free proxies for temporary use.</p>
+			<a href="https://github.com/narkhedesam/Proxy-List-Scrapper">
+				<button class="github">
+					<svg class="octicon octicon-mark-github v-align-middle" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true" style="margin-right: 8px;">
+						<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+					</svg>
+					<span>GitHub</span>
+				</button>
+			</a>
+			<div class="arrow bounce">
+				<a href="#home">
+					<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" fill="#fff"/>
+					</svg>
+					</a>
+			</div>
+		</div>
+	</section>
+	
+	<div class="home" id ="home">
+		<div class="banner">
+			<h1 class="gradient-text">Proxy List Scrapper</h1>
+			<div class="bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
+			<h2 id="bulgy-radios-label">Select an option</h2>
+				<label>
+					<input type="radio" name="options" value="ALL" id="ALL" checked />
+					<span class="radio"></span>
+					<span class="label">ALL Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options"  value="SSL" id="SSL" />
+					<span class="radio"></span>
+					<span class="label">SSL Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="GOOGLE" id="GOOGLE" />
+					<span class="radio"></span>
+					<span class="label">Google Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="ANANY" id="ANANY"/>
+					<span class="radio"></span>
+					<span class="label">Anonymous Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="UK" id="UK" />
+					<span class="radio"></span>
+					<span class="label">UK Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="US" id="US" />
+					<span class="radio"></span>
+					<span class="label">US Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="NEW" id="NEW"/>
+					<span class="radio"></span>
+					<span class="label">New Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="SPYS.ME" id="SPYS-ME" />
+					<span class="radio"></span>
+					<span class="label">spys.me Free Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="proxyscrape" id="proxyscrape" />
+					<span class="radio"></span>
+					<span class="label">ProxyScape Free Proxies</span>
+				</label>
+			</div>
+
+			<button id="scrape_now" class="gradient"><span class="spinner"></span>Scape Now</button>
+		</div>
+	</div>
+	<div class="result" id="result_div">
+		<h1 class="gradient-text">Proxy List Scrapper</h1>
+		<div class="result-div">
+			<button id="copy" data-clipboard-target="#result" >
+				<svg class="octicon octicon-clippy" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+			</button>
+			<textarea id="result" name="result" rows="15" cols="40"></textarea>
+		</div>
+		<button id="back" class="gradient">Back</button>
+	</div>
+	<div class="author" id="author">
+		<h1 class="gradient-text">Proxy List Scrapper</h1>
+		<h2 style="text-align: center;">Author</h2>
+		<div class="author-div">
+			<div class="github-card" data-github="narkhedesam" data-width="400" data-height="317" data-theme="medium"></div>
+			<script src="https://cdn.jsdelivr.net/gh/lepture/github-cards@latest/jsdelivr/widget.js"></script>
+		</div>
+	</div>
+  </body>
+</html>
