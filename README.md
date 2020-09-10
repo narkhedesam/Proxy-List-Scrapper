@@ -1,10 +1,18 @@
-# Proxy-List-Scrapper ([demo live example using javascript](https://narkhedesam.github.io/Proxy-List-Scrapper))
+# Proxy-List-Scrapper 
+#### [demo live example using javascript](https://narkhedesam.github.io/Proxy-List-Scrapper)
 <p align="center">
     <img width="460" height="300" src="https://raw.githubusercontent.com/narkhedesam/Proxy-List-Scrapper/master/_Proxy-List-Scrapper%20logo.jpg">
 </p>
-
-[![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/sameernarkhede/250)
-
+<p align="center">
+    <a href="https://paypal.me/sameernarkhede/250">
+        <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="paypal" />
+    </a>
+    <img src="https://img.shields.io/github/license/narkhedesam/Proxy-List-Scrapper" alt="Proxy-List-Scrapper licence" />
+    <img src="https://img.shields.io/github/forks/narkhedesam/Proxy-List-Scrapper" alt="Proxy-List-Scrapper forks" />
+    <img src="https://img.shields.io/github/stars/narkhedesam/Proxy-List-Scrapper" alt="Proxy-List-Scrapper stars" />
+    <img src="https://img.shields.io/github/issues/narkhedesam/Proxy-List-Scrapper" alt="Proxy-List-Scrapper issues" />
+    <img src="https://img.shields.io/github/issues-pr/narkhedesam/Proxy-List-Scrapper" alt="Proxy-List-Scrapper pull-requests" />
+</p>
 <br/><br/>
 Proxy List Scrapper from various websites. 
 They gives the free proxies for temporary use.
