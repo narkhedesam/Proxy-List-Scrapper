@@ -17,6 +17,9 @@
 Proxy List Scrapper from various websites. 
 They gives the free proxies for temporary use.
 
+#### Chrome Extension in here
+you can download the chrome extension "Free Proxy List Scrapper Chrome Extension" folder and load in the extension.<br/>
+##### Stay tuned live extension is on the way.
 
 ## Web_Scrapper Module <a href="https://github.com/narkhedesam/Proxy-List-Scrapper/blob/master/Web_Scrapper/README.md">here</a>
 Web Scrapper is proxy web scraper using proxy rotating api https://scrape.do <br/>

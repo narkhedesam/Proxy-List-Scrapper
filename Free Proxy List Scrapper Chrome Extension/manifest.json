@@ -1,0 +1,37 @@
+{
+	"name": "Free Proxy List Scrapper",
+	"description": "This extension will extract free proxies from various websites",
+	"version": "1.0",
+	"background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+	"manifest_version": 2,
+
+	"browser_action": {
+		"default_popup": "index.html",
+		"default_icon": {
+        "16": "Proxy-List-Scrapper-logo.png",
+        "32": "Proxy-List-Scrapper-logo.png",
+        "48": "Proxy-List-Scrapper-logo.png",
+        "128": "Proxy-List-Scrapper-logo.png"
+      }
+	},
+	"icons": {
+        "16": "Proxy-List-Scrapper-logo.png",
+        "32": "Proxy-List-Scrapper-logo.png",
+        "48": "Proxy-List-Scrapper-logo.png",
+        "128": "Proxy-List-Scrapper-logo.png"
+	},
+	"permissions": [
+		"activeTab",
+		"https://www.sslproxies.org/",
+		"https://www.google-proxy.net/",
+		"https://free-proxy-list.net/anonymous-proxy.html",
+		"https://free-proxy-list.net/uk-proxy.html",
+		"https://www.us-proxy.org/",
+		"https://free-proxy-list.net/",
+		"https://spys.me/proxy.txt",
+		"https://api.proxyscrape.com/?request=getproxies&proxytype=all&country=all&ssl=all&anonymity=all"
+	]
+}

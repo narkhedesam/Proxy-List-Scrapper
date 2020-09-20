@@ -1,0 +1,444 @@
+body{
+	margin:20px;
+}
+
+ul.horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	position:fixed;
+	width: 100%;
+	box-shadow: 0 0.5rem 1rem rgba(0,0,0,.75);
+	z-index: 1;
+}
+ul.horizontal li {
+    float: left;
+}
+
+ul.horizontal li a.active {
+    background-color: #4CAF50;
+}
+ul.horizontal li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-family: sans-serif;
+}
+
+section#intro {
+    background: linear-gradient(0deg,#ff6a00 0,#ee0979 100%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+}
+
+button.github {
+    color: #fff;
+    background-color: #2ea44f;
+	border: 1px solid #484848;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.75);
+    appearance: none;
+    width: 100px;
+    outline: 0;
+    border: 0;
+    height: 2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.h1-text{
+    font-size: 3em;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+div.banner{
+	max-width: 400px;
+    text-align: center;
+	margin: auto;
+	padding: 50px 0;
+}
+
+.intro img{
+	border-radius: 12px;
+    width: 280px;
+	box-shadow: 0 0.5rem 1rem rgba(0,0,0,.75);
+}
+
+.banner img{
+	width: 350px;
+    border-radius: 50%;
+    margin: 0 12px;
+}
+
+.banner button#scrape_now, #back{
+    padding: 7px;
+	width:200px;
+    font-size: 1rem;
+    font-family: cursive;
+    border-radius: 12px;
+    appearance: none;
+    border: 0;
+	cursor:pointer;
+	box-shadow: 0 0.5rem 1rem rgba(0,0,0,.75);
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.banner button#scrape_now:active, .banner button#scrape_now:hover, .banner button#scrape_now:focus, #back:active, #back:hover, #back:focus{
+    outline: none;
+    border: 2px solid;
+}
+
+
+
+.gradient-text{
+	background-image: linear-gradient(45deg,#ca4246 16.666%,#e16541 0,#e16541 33.333%,#f18f43 0,#f18f43 50%,#8b9862 0,#8b9862 66.666%,#759cf5 0,#759cf5 83.333%,#a7489b 0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	text-shadow: 0 0.5rem 1rem #00000052;
+    padding: 50px 0;
+
+}
+
+.gradient{
+	background-image: linear-gradient(45deg,#ca4246 16.666%,#e16541 0,#e16541 33.333%,#f18f43 0,#f18f43 50%,#8b9862 0,#8b9862 66.666%,#759cf5 0,#759cf5 83.333%,#a7489b 0);
+}
+
+*::selection {
+    background: #ffff0061;
+}
+
+#copy{
+	position: absolute;
+}
+
+
+.result{
+	text-align: center;
+	display:none;
+}
+
+
+/* This is the submit button styles */
+#scrape_now {
+  display: block;
+  margin: 0 auto;
+  padding: .6em .8em;
+  /* Font-size is the root value that determines size of spinner parts. 
+Change this to whatever you want and spinner elements will size to match. */
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: .4em;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: all 1s;
+}
+
+#scrape_now:focus, #scrape_now:disabled {
+  outline: none;
+}
+
+
+.spin {
+  padding-left: 2.5em;
+  display: block;
+}
+
+.spin .spinner {
+  top: .4em;
+  width: 2.5em;
+  display: block;
+  position: absolute;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin .spinner::before {
+  content: "";
+  width: 1.5em; 
+  height: 1.5em; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: solid .35em #999; 
+  border-bottom-color: #555; 
+  animation: .8s linear infinite spinner; 
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+h2 {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  color: gray;
+}
+
+
+.bulgy-radios {
+  font-family: sans-serif;
+  padding: 0 20px;
+}
+.bulgy-radios label {
+    display: block;
+    position: relative;
+    height: 1em;
+    padding-left: 1.5rem;
+    margin-bottom: .5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #555;
+    letter-spacing: 1px;
+	padding-top: 2px;
+}
+.bulgy-radios label:hover input:not(:checked) ~ .radio {
+  opacity: 0.8;
+}
+.bulgy-radios .label {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  padding-right: 3rem;
+}
+.bulgy-radios .label span {
+  line-height: 1em;
+}
+.bulgy-radios input {
+  position: absolute;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  left: -2000px;
+}
+.bulgy-radios input:checked ~ .radio {
+  background-color: #0ac07d;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+.bulgy-radios input:checked ~ .radio::after {
+  opacity: 1;
+}
+.bulgy-radios input:checked ~ .label {
+  color: #0bae72;
+}
+.bulgy-radios input:checked ~ .label span{
+  -webkit-animation: bulge .5s forwards;
+          animation: bulge .5s forwards;
+		  
+}
+.bulgy-radios input:checked ~ .label span:nth-child(1) {
+  -webkit-animation-delay: 0.025s;
+          animation-delay: 0.025s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(2) {
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(3) {
+  -webkit-animation-delay: 0.075s;
+          animation-delay: 0.075s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(4) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(5) {
+  -webkit-animation-delay: 0.125s;
+          animation-delay: 0.125s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(6) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(7) {
+  -webkit-animation-delay: 0.175s;
+          animation-delay: 0.175s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(8) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(9) {
+  -webkit-animation-delay: 0.225s;
+          animation-delay: 0.225s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(10) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(11) {
+  -webkit-animation-delay: 0.275s;
+          animation-delay: 0.275s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(12) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(13) {
+  -webkit-animation-delay: 0.325s;
+          animation-delay: 0.325s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(14) {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(15) {
+  -webkit-animation-delay: 0.375s;
+          animation-delay: 0.375s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(16) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(17) {
+  -webkit-animation-delay: 0.425s;
+          animation-delay: 0.425s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(18) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(19) {
+  -webkit-animation-delay: 0.475s;
+          animation-delay: 0.475s;
+}
+
+.radio {
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  background: #c9ded6;
+  border-radius: 50%;
+}
+.radio::after {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  top: .25rem;
+  left: .25rem;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background: #fff;
+}
+
+@-webkit-keyframes bulge {
+  50% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
+
+@keyframes bulge {
+  50% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+div#author {
+    text-align: center;
+	padding-top: 50px;
+}
+

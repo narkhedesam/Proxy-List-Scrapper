@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Proxy List Scrapper</title>
+	<link href="styles.css" rel="stylesheet" type="text/css">
+    <script src="scrapper.js"></script>
+	<script src="clipboard.min.js"></script>
+  </head>
+  <body>
+    <div class="home" id ="home">
+		<div class="banner">
+			<img src="Proxy-List-Scrapper-logo.png" style="border-radius: 50%;">
+			<h1 class="gradient-text">Free Proxy List Scrapper</h1>
+			<div class="bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
+			<h2 id="bulgy-radios-label">Select an option</h2>
+				<label>
+					<input type="radio" name="options" value="ALL" id="ALL" checked />
+					<span class="radio"></span>
+					<span class="label">ALL Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options"  value="SSL" id="SSL" />
+					<span class="radio"></span>
+					<span class="label">SSL Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="GOOGLE" id="GOOGLE" />
+					<span class="radio"></span>
+					<span class="label">Google Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="ANANY" id="ANANY"/>
+					<span class="radio"></span>
+					<span class="label">Anonymous Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="UK" id="UK" />
+					<span class="radio"></span>
+					<span class="label">UK Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="US" id="US" />
+					<span class="radio"></span>
+					<span class="label">US Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="NEW" id="NEW"/>
+					<span class="radio"></span>
+					<span class="label">New Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="SPYS.ME" id="SPYS-ME" />
+					<span class="radio"></span>
+					<span class="label">spys.me Free Proxies</span>
+				</label>
+				<label>
+					<input type="radio" name="options" value="proxyscrape" id="proxyscrape" />
+					<span class="radio"></span>
+					<span class="label">ProxyScape Free Proxies</span>
+				</label>
+			</div>
+			<button id="scrape_now" class="gradient"><span class="spinner"></span>Scape Now</button>
+		</div>
+	</div>
+	<div class="result" id="result_div">
+		<h1 class="gradient-text">Proxy List Scrapper</h1>
+		<div class="result-div">
+			<button id="copy" data-clipboard-target="#result" >
+				<svg class="octicon octicon-clippy" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+			</button>
+			<textarea id="result" name="result" rows="15" cols="40"></textarea>
+		</div>
+		<button id="back" class="gradient">Back</button>
+	</div>
+  </body>
+</html>
