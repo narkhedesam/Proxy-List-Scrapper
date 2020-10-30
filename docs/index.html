@@ -1,5 +1,5 @@
 <!doctype html>
-<html onscroll="scroll()">
+<html>
   <head>
 	  <meta charset="UTF-8">
 	  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -7,16 +7,37 @@
 	  <meta name="keywords" content="proxy, freeproxy, freeproxylist, proxyscrape, proxies, scrapper, free-proxies, web-scrapper, data-mining, crawler, crawlers, web-scrapping, rotating-proxy, proxy-list">
 	<title>Proxy List Scrapper</title>
 	<link href="styles.css" rel="stylesheet" type="text/css">
-	<script src="scrapper.js"></script>
-	<script src="clipboard.min.js"></script>
+	<style>
+	.loader {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		background: rgb(255 232 232);
+		background-size: 50%;
+	}
+	</style>
   </head>
-  <body  onscroll="scroll()">
-	<ul class="horizontal">
+  <body>
+  <div class="loader">
+  <h1 class="gradient-text" style="text-align:center;">Proxy List Scrapper</h1>
+		<img src="loading.gif" style="
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+	width: 200px;
+">
+  </div>
+	<!-- <ul class="horizontal">
 	  <li><a class="active" href="#">Home</a></li>
 	  <li><a href="#home">Scrapper</a></li>
 	  <li><a href="#author">Author</a></li>
-	</ul>
-	<a href="https://github.com/narkhedesam/Proxy-List-Scrapper" class="github-corner" aria-label="View source on GitHub">
+	</ul> -->
+ 	<a href="https://github.com/narkhedesam/Proxy-List-Scrapper" class="github-corner" aria-label="View source on GitHub">
 		<svg width="80" height="80" viewBox="0 0 250 250" style="z-index: 1;fill:#64CEAA; color:#fff; position: fixed; top: 0; border: 0; right: 0;" aria-hidden="true">
 			<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
 			<path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
@@ -24,13 +45,12 @@
 		</svg>
 	</a>
 	<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-	<a href="#" class="top" aria-label="Goto top">
+	<a href="#" class="top" aria-label="Goto top" style="position: fixed;bottom: 20px;right: 20px;">
 		<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
 			<path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm18-1h-4v7h-4v-7h-4l6-6 6 6z" fill="#000"/>
 		</svg>
 	</a>
-	<style>.top {position: fixed;bottom: 20px;right: 20px;}</style>
- 
+ <div class="main">
 	<section #intro id="intro">	
 		<div class="intro" style="width: max-content;margin: auto;">
 			<img src="Proxy-List-Scrapper-logo.png">
@@ -45,7 +65,7 @@
 				</button>
 			</a>
 			<div class="arrow bounce">
-				<a href="#home">
+				<a onclick="$.fn.moveTo(2)" style="cursor:pointer;">
 					<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
 						<path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" fill="#fff"/>
 					</svg>
@@ -54,7 +74,29 @@
 		</div>
 	</section>
 	
-	<div class="home" id ="home">
+	<section class="desc" id ="desc">
+		<div class="container">
+				<h1 class="h1-text" style="text-align:center;font-size:2em;margin-bottom: 0;">Proxy List Scrapper</h1>
+				
+				<div class="contents">
+					<h2 class="title" style="text-align: center;margin-bottom: 0;">What is a proxy</h2>
+					<p>A proxy is server that acts like a gateway or intermediary between any device and the rest of the internet. A proxy accepts and forwards connection requests, then returns data for those requests. This is the basic definition, which is quite limited, because there are dozens of unique proxy types with their own distinct configurations. </p>
+					
+					<h2 class="title" style="text-align: center;margin-bottom: 0;">What are the most popular types of proxies:</h2>
+					<h4>Residential proxies, Datacenter proxies, Anonymous proxies, Transparent proxies</h4>
+					
+					<h2 class="title" style="text-align: center;margin-bottom: 0;">People use proxies to: </h2>
+					<h4>Avoid Geo-restrictions, Protect Privacy and Increase Security, Avoid Firewalls and Bans, Automate Online Processes, Use Multiple Accounts and Gather Data</h4>
+					
+				
+				
+				
+				</div>
+			
+		</div>
+	</section>
+	
+	<section class="home" id ="home">
 		<div class="banner">
 			<h1 class="gradient-text">Proxy List Scrapper</h1>
 			<p style="color:#fff;font-family: cursive;">Proxy List Scrapper from various websites. They gives the free proxies for temporary use.</p>
@@ -109,8 +151,9 @@
 
 			<button id="scrape_now" class="gradient"><span class="spinner"></span>Scape Now</button>
 		</div>
-	</div>
-	<div class="result" id="result_div">
+	</section>
+	<section class="result" id="result_div">
+	<div class="banner">
 		<h1 class="gradient-text">Proxy List Scrapper</h1>
 		<div class="result-div">
 			<button id="copy" data-clipboard-target="#result" >
@@ -119,14 +162,25 @@
 			<textarea id="result" name="result" rows="15" cols="40"></textarea>
 		</div>
 		<button id="back" class="gradient">Back</button>
-	</div>
-	<div class="author" id="author">
-		<h1 class="gradient-text">Proxy List Scrapper</h1>
+	</section>
+	<section class="author" id="author">
+		<h1 class="gradient-text" style="text-align: center;">Proxy List Scrapper</h1>
 		<h2 style="text-align: center;">Author</h2>
 		<div class="author-div">
 			<div class="github-card" data-github="narkhedesam" data-width="400" data-height="" data-theme="medium"></div>
 			<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 		</div>
+	</section>
 	</div>
+	<script src="scrapper.js"></script>
+	<script src="clipboard.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://rawgit.com/peachananr/onepage-scroll/master/jquery.onepage-scroll.js"></script>
+	<script>
+	$(window).load(function() {
+        $(".loader").fadeOut("slow");
+	});
+		$(".main").onepage_scroll();
+	</script>
   </body>
 </html>

@@ -1,33 +1,4 @@
- var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
- var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
-
-function scroll(){
-	document.getElementById("intro").style.width = "calc(100%)";
-	document.getElementById("intro").style.height = ((window.innerHeight > 0) ? window.innerHeight : screen.height )+ 'px';
-	
-	document.getElementById("home").style.width = "calc(100%)";
-	document.getElementById("home").style.height = ((window.innerHeight > 0) ? window.innerHeight : screen.height )+ 'px';
-	
-	document.getElementById("result_div").style.width = "calc(100%)";
-	document.getElementById("result_div").style.height = ((window.innerHeight > 0) ? window.innerHeight : screen.height )+ 'px';
-	
-	document.getElementById("author").style.width = "calc(100%)";
-	document.getElementById("author").style.height = ((window.innerHeight > 0) ? window.innerHeight : screen.height )+ 'px';
-	
-}
-
 document.addEventListener('DOMContentLoaded', function() {
-	document.getElementById("intro").style.width = "calc(100%)";
-	document.getElementById("intro").style.height = ((window.innerHeight > 0) ? window.innerHeight : screen.height )+ 'px';
-	
-	document.getElementById("home").style.width = "calc(100%)";
-	document.getElementById("home").style.height = ((window.innerHeight > 0) ? window.innerHeight : screen.height )+ 'px';
-	
-	document.getElementById("result_div").style.width = "calc(100%)";
-	document.getElementById("result_div").style.height = ((window.innerHeight > 0) ? window.innerHeight : screen.height )+ 'px';
-	
-	document.getElementById("author").style.width = "calc(100%)";
-	document.getElementById("author").style.height = ((window.innerHeight > 0) ? window.innerHeight : screen.height )+ 'px';
 	
 	const labels = document.querySelectorAll('.label');
 	labels.forEach(label => {
@@ -69,8 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		scrape_now_button.classList.remove('spin');
 		scrape_now_button.disabled = false;
 		document.getElementById('result').value = "";
-		document.getElementById("result_div").style.display = "none";
-		document.getElementById("home").style.display = "block";
+		$.fn.moveTo(2)
 	}, false);
 	
 }, false);
@@ -98,8 +68,7 @@ async function category_handler(category, categories){
 	// console.log("proxyList --> " + proxyList)
 	try{
 		document.getElementById('result').value = proxyList.join("\n")
-		document.getElementById("result_div").style.display = "block";
-		document.getElementById("home").style.display = "none";
+		$.fn.moveTo(3)
 	}catch(e){}
 }
 
