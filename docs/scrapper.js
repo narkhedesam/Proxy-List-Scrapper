@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		scrape_now_button.classList.remove('spin');
 		scrape_now_button.disabled = false;
 		document.getElementById('result').value = "";
-		$.fn.moveTo(2)
+		$.fn.moveTo(3)
 	}, false);
 	
 }, false);
@@ -68,7 +68,7 @@ async function category_handler(category, categories){
 	// console.log("proxyList --> " + proxyList)
 	try{
 		document.getElementById('result').value = proxyList.join("\n")
-		$.fn.moveTo(3)
+		$.fn.moveTo(4)
 	}catch(e){}
 }
 
