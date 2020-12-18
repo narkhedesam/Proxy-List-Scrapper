@@ -6,10 +6,25 @@
 
 import sys
 import traceback
-from re import findall
+from re import findall, sub
 
 import requests
 from requests.exceptions import ConnectionError
+
+SSL = 'https://www.sslproxies.org/',
+GOOGLE = 'https://www.google-proxy.net/',
+ANANY = 'https://free-proxy-list.net/anonymous-proxy.html',
+UK = 'https://free-proxy-list.net/uk-proxy.html',
+US = 'https://www.us-proxy.org/',
+NEW = 'https://free-proxy-list.net/',
+SPYS_ME = 'http://spys.me/proxy.txt',
+PROXYSCRAPE = 'https://api.proxyscrape.com/?request=getproxies&proxytype=all&country=all&ssl=all&anonymity=all',
+PROXYNOVA = 'https://www.proxynova.com/proxy-server-list/'
+PROXYLIST_DOWNLOAD_HTTP = 'https://www.proxy-list.download/HTTP'
+PROXYLIST_DOWNLOAD_HTTPS = 'https://www.proxy-list.download/HTTPS'
+PROXYLIST_DOWNLOAD_SOCKS4 = 'https://www.proxy-list.download/SOCKS4'
+PROXYLIST_DOWNLOAD_SOCKS5 = 'https://www.proxy-list.download/SOCKS5'
+ALL = 'ALL'
 
 
 class ScrapperException(BaseException):
@@ -20,6 +35,7 @@ class Proxies(object):
     """
        Proxies is the response data type of getProxies function
     """
+
     def __init__(self, proxies, category):
         """
         Initialize the proxies class
@@ -35,6 +51,7 @@ class Proxy(object):
     """
         Proxy is the class for proxy.
     """
+
     def __init__(self, ip, port):
         """
         Initialization of the proxy class
@@ -49,6 +66,7 @@ class Scrapper:
     """
     Scrapper class is use to scrape the proxies from various websites.
     """
+
     def __init__(self, category='ssl', print_err_trace=True):
         """
         Initialization of scrapper class
@@ -58,16 +76,22 @@ class Scrapper:
         # init with Empty Proxy List
         self.proxies = []
         self.category = category
-        self.Categories = {'SSL': 'https://www.sslproxies.org/',
-                           'GOOGLE': 'https://www.google-proxy.net/',
-                           'ANANY': 'https://free-proxy-list.net/anonymous-proxy.html',
-                           'UK': 'https://free-proxy-list.net/uk-proxy.html',
-                           'US': 'https://www.us-proxy.org/',
-                           'NEW': 'https://free-proxy-list.net/',
-                           'SPYS.ME': 'http://spys.me/proxy.txt',
-                           'proxyscrape': 'https://api.proxyscrape.com/?request=getproxies&proxytype=all&country=all&ssl=all&anonymity=all',
-                           'ALL': 'ALL'
-                           }
+        self.Categories = {
+            'SSL': SSL,
+            'GOOGLE': GOOGLE,
+            'ANANY': ANANY,
+            'UK': UK,
+            'US': US,
+            'NEW': NEW,
+            'SPYS.ME': SPYS_ME,
+            'PROXYSCRAPE': PROXYSCRAPE,
+            'PROXYNOVA': PROXYNOVA,
+            'PROXYLIST_DOWNLOAD_HTTP': PROXYLIST_DOWNLOAD_HTTP,
+            'PROXYLIST_DOWNLOAD_HTTPS': PROXYLIST_DOWNLOAD_HTTPS,
+            'PROXYLIST_DOWNLOAD_SOCKS4': PROXYLIST_DOWNLOAD_SOCKS4,
+            'PROXYLIST_DOWNLOAD_SOCKS5': PROXYLIST_DOWNLOAD_SOCKS5,
+            'ALL': ALL
+        }
         self.print_trace = print_err_trace
 
     def getProxies(self):
@@ -100,6 +124,16 @@ class Scrapper:
             r = requests.get(url=self.Categories[self.category])
             if self.category == 'SPYS.ME' or self.category == 'proxyscrape':
                 self.proxies = findall(pattern=r'\d+\.\d+\.\d+\.\d+:\d+', string=r.text)
+            if self.category == 'PROXYNOVA':
+                matches = findall(
+                    pattern=r'\d+\.\d+\.\d+\.\d+\'\)\;</script>\s*</abbr>\s*</td>\s*<td\salign=\"left\">\s*\d+',
+                    string=r.text)
+                self.proxies = [sub(r"\'\)\;</script>\s*</abbr>\s*</td>\s*<td\salign=\"left\">\s*", ":", m) for m in
+                                matches]
+            if self.category in {'PROXYLIST_DOWNLOAD_HTTP', 'PROXYLIST_DOWNLOAD_HTTPS',
+                                 'PROXYLIST_DOWNLOAD_SOCKS4', 'PROXYLIST_DOWNLOAD_SOCKS5'}:
+                matches = findall(pattern=r'\d+\.\d+\.\d+\.\d+</td>\s*<td>\d+', string=r.text)
+                self.proxies = [sub(r"</td>\s*<td>", ":", m) for m in matches]
             else:
                 matches = findall(pattern=r'\d+\.\d+\.\d+\.\d+</td><td>\d+', string=r.text)
                 self.proxies = [m.replace('</td><td>', ':') for m in matches]

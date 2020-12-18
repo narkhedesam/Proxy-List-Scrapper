@@ -17,6 +17,15 @@
 Proxy List Scrapper from various websites. 
 They gives the free proxies for temporary use.
 
+### What is a proxy
+A proxy is server that acts like a gateway or intermediary between any device and the rest of the internet. A proxy accepts and forwards connection requests, then returns data for those requests. This is the basic definition, which is quite limited, because there are dozens of unique proxy types with their own distinct configurations.
+
+### What are the most popular types of proxies:
+Residential proxies, Datacenter proxies, Anonymous proxies, Transparent proxies
+
+### People use proxies to:
+Avoid Geo-restrictions, Protect Privacy and Increase Security, Avoid Firewalls and Bans, Automate Online Processes, Use Multiple Accounts and Gather Data
+
 #### Chrome Extension in here
 you can download the chrome extension "Free Proxy List Scrapper Chrome Extension" folder and load in the extension.<br/>
 ##### Goto Chrome Extension <a href="https://chrome.google.com/webstore/detail/free-proxy-list-scrapper/jpnflejagpflcemgfnhckkdckpkkfbcc?hl=en-US">click here</a>.
@@ -44,15 +53,20 @@ After that simply create an object of Scrapper class as "scrapper"<br/>
 
 Here Your need to specify category defined as below:<br/>
 
-    'SSL': 'https://www.sslproxies.org/',
-    'GOOGLE': 'https://www.google-proxy.net/',
-    'ANANY': 'https://free-proxy-list.net/anonymous-proxy.html',
-    'UK': 'https://free-proxy-list.net/uk-proxy.html',
-    'US': 'https://www.us-proxy.org/',
-    'NEW': 'https://free-proxy-list.net/',
-    'SPYS.ME': 'http://spys.me/proxy.txt',
-    'proxyscrape': 'https://api.proxyscrape.com/?request=getproxies&proxytype=all&country=all&ssl=all&anonymity=all',
-    'ALL': 'ALL'
+    SSL = 'https://www.sslproxies.org/',
+    GOOGLE = 'https://www.google-proxy.net/',
+    ANANY = 'https://free-proxy-list.net/anonymous-proxy.html',
+    UK = 'https://free-proxy-list.net/uk-proxy.html',
+    US = 'https://www.us-proxy.org/',
+    NEW = 'https://free-proxy-list.net/',
+    SPYS_ME = 'http://spys.me/proxy.txt',
+    PROXYSCRAPE = 'https://api.proxyscrape.com/?request=getproxies&proxytype=all&country=all&ssl=all&anonymity=all',
+    PROXYNOVA = 'https://www.proxynova.com/proxy-server-list/'
+    PROXYLIST_DOWNLOAD_HTTP = 'https://www.proxy-list.download/HTTP'
+    PROXYLIST_DOWNLOAD_HTTPS = 'https://www.proxy-list.download/HTTPS'
+    PROXYLIST_DOWNLOAD_SOCKS4 = 'https://www.proxy-list.download/SOCKS4'
+    PROXYLIST_DOWNLOAD_SOCKS5 = 'https://www.proxy-list.download/SOCKS5'
+    ALL = 'ALL'
 
 These are all categories.<br/>
 After you have to call a function named "getProxies"<br/>
@@ -85,9 +99,28 @@ in data having proxies,len,category
     print(data.category)
   
 ## Author 
-Sameer Narkhede <br/>
-Profile : https://github.com/narkhedesam <br/>
-Website : https://narkhedesam.github.io/ 
+<b>Sameer Narkhede</b> <br/>
+<p align="left">
+  <a href="https://github.com/narkhedesam" target="blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="https://github.com/narkhedesam" height="20" width="20" />
+  </a>
+  <a href="https://narkhedesam.com/" target="blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/googlechrome.svg" alt="https://narkhedesam.com/" height="20" width="20" />
+  </a>
+  <a href="https://www.linkedin.com/in/sameer-narkhede/" target="blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="https://www.linkedin.com/in/sameer-narkhede/" height="20" width="20" />
+  </a>
+  <a href="https://www.facebook.com/narkhedesam" target="blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" alt="https://www.facebook.com/narkhedesam" height="20" width="20" />
+  </a>
+  <a href="https://www.instagram.com/sam_narkhede/" target="blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="https://www.instagram.com/sam_narkhede/" height="20" width="20" />
+  </a>
+  <a href="https://t.me/narkhedesam" target="blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/telegram.svg" alt="https://t.me/narkhedesam" height="20" width="20" />
+  </a>
+
+</p>
 
 ### Thanks for giving free proxies
  - https://www.sslproxies.org/
@@ -98,6 +131,8 @@ Website : https://narkhedesam.github.io/
  - https://free-proxy-list.net/
  - http://spys.me/proxy.txt
  - https://proxyscrape.com/
+ - https://www.proxynova.com/proxy-server-list/
+ - https://www.proxy-list.download/
 <br/><br/>
 
 

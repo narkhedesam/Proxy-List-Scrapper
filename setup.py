@@ -8,19 +8,19 @@ with open(path.join(this_directory, 'README.md')) as f:
 
 setup(
     name='Proxy-List-Scrapper',
-    version='0.1.6',
+    version='0.2.0',
     packages=find_packages(),
-    url='',
+    url='https://pypi.org/project/Proxy-List-Scrapper/',
     license='MIT License',
     author='Sameer Narkhede',
     author_email='narkhedesam@gmail.com',
-    description='proxy list scrapper from various websites. they gives the free proxies for temporary use.',
+    description='Proxy list scrapper from various websites. They gives the free proxies for temporary use.',
     # other arguments omitted
     long_description=long_description,
     long_description_content_type='text/markdown',
     install_requires=[
           'requests',
-      ],
+    ],
     include_package_data=True,
 
 )

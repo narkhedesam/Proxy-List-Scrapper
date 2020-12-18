@@ -34,11 +34,30 @@ get response from scrape.do api
  
  
 ## Author 
-Sameer Narkhede <br/>
-Profile : https://github.com/narkhedesam <br/>
-Website : https://narkhedesam.github.io/ 
+<b>Sameer Narkhede</b> <br/>
+<p align="left">
+  <a href="https://github.com/narkhedesam" target="blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="https://github.com/narkhedesam" height="20" width="20" />
+  </a>
+  <a href="https://narkhedesam.com/" target="blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/googlechrome.svg" alt="https://narkhedesam.com/" height="20" width="20" />
+  </a>
+  <a href="https://www.linkedin.com/in/sameer-narkhede/" target="blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="https://www.linkedin.com/in/sameer-narkhede/" height="20" width="20" />
+  </a>
+  <a href="https://www.facebook.com/narkhedesam" target="blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" alt="https://www.facebook.com/narkhedesam" height="20" width="20" />
+  </a>
+  <a href="https://www.instagram.com/sam_narkhede/" target="blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="https://www.instagram.com/sam_narkhede/" height="20" width="20" />
+  </a>
+  <a href="https://t.me/narkhedesam" target="blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/telegram.svg" alt="https://t.me/narkhedesam" height="20" width="20" />
+  </a>
 
-<h5>special thanks to Batuhan Özyön - https://github.com/bynf </h5>
+</p>
+
+<h5>special thanks to <b>Batuhan Özyön</b> - https://github.com/bynf </h5>
  
  
 ## Screenshot
