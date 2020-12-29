@@ -1,9 +1,0 @@
-README.md
-setup.py
-Proxy_List_Scrapper/__init__.py
-Proxy_List_Scrapper.egg-info/PKG-INFO
-Proxy_List_Scrapper.egg-info/SOURCES.txt
-Proxy_List_Scrapper.egg-info/dependency_links.txt
-Proxy_List_Scrapper.egg-info/requires.txt
-Proxy_List_Scrapper.egg-info/top_level.txt
-Web_Scrapper/__init__.py
