@@ -11,14 +11,14 @@ from re import findall, sub
 import requests
 from requests.exceptions import ConnectionError
 
-SSL = 'https://www.sslproxies.org/',
-GOOGLE = 'https://www.google-proxy.net/',
-ANANY = 'https://free-proxy-list.net/anonymous-proxy.html',
-UK = 'https://free-proxy-list.net/uk-proxy.html',
-US = 'https://www.us-proxy.org/',
-NEW = 'https://free-proxy-list.net/',
-SPYS_ME = 'http://spys.me/proxy.txt',
-PROXYSCRAPE = 'https://api.proxyscrape.com/?request=getproxies&proxytype=all&country=all&ssl=all&anonymity=all',
+SSL = 'https://www.sslproxies.org/'
+GOOGLE = 'https://www.google-proxy.net/'
+ANANY = 'https://free-proxy-list.net/anonymous-proxy.html'
+UK = 'https://free-proxy-list.net/uk-proxy.html'
+US = 'https://www.us-proxy.org/'
+NEW = 'https://free-proxy-list.net/'
+SPYS_ME = 'http://spys.me/proxy.txt'
+PROXYSCRAPE = 'https://api.proxyscrape.com/?request=getproxies&proxytype=all&country=all&ssl=all&anonymity=all'
 PROXYNOVA = 'https://www.proxynova.com/proxy-server-list/'
 PROXYLIST_DOWNLOAD_HTTP = 'https://www.proxy-list.download/HTTP'
 PROXYLIST_DOWNLOAD_HTTPS = 'https://www.proxy-list.download/HTTPS'
