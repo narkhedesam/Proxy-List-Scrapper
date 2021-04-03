@@ -122,20 +122,21 @@ class Scrapper:
         """
         try:
             r = requests.get(url=self.Categories[self.category])
+            print(r.text)
             if self.category == 'SPYS.ME' or self.category == 'proxyscrape':
-                self.proxies = findall(pattern=r'\d+\.\d+\.\d+\.\d+:\d+', string=r.text)
-            if self.category == 'PROXYNOVA':
+                self.proxies = findall(r'\d+\.\d+\.\d+\.\d+:\d+', r.text)
+            elif self.category == 'PROXYNOVA':
                 matches = findall(
-                    pattern=r'\d+\.\d+\.\d+\.\d+\'\)\;</script>\s*</abbr>\s*</td>\s*<td\salign=\"left\">\s*\d+',
-                    string=r.text)
+                    r'\d+\.\d+\.\d+\.\d+\'\)\;</script>\s*</abbr>\s*</td>\s*<td\salign=\"left\">\s*\d+',
+                    r.text)
                 self.proxies = [sub(r"\'\)\;</script>\s*</abbr>\s*</td>\s*<td\salign=\"left\">\s*", ":", m) for m in
                                 matches]
-            if self.category in {'PROXYLIST_DOWNLOAD_HTTP', 'PROXYLIST_DOWNLOAD_HTTPS',
+            elif self.category in {'PROXYLIST_DOWNLOAD_HTTP', 'PROXYLIST_DOWNLOAD_HTTPS',
                                  'PROXYLIST_DOWNLOAD_SOCKS4', 'PROXYLIST_DOWNLOAD_SOCKS5'}:
-                matches = findall(pattern=r'\d+\.\d+\.\d+\.\d+</td>\s*<td>\d+', string=r.text)
+                matches = findall(r'\d+\.\d+\.\d+\.\d+</td>\s*<td>\d+', r.text)
                 self.proxies = [sub(r"</td>\s*<td>", ":", m) for m in matches]
             else:
-                matches = findall(pattern=r'\d+\.\d+\.\d+\.\d+</td><td>\d+', string=r.text)
+                matches = findall(r'\d+\.\d+\.\d+\.\d+</td><td>\d+', r.text)
                 self.proxies = [m.replace('</td><td>', ':') for m in matches]
             return self.proxies
         except ConnectionError:
@@ -171,7 +172,7 @@ if __name__ == "__main__":
         print('You didn\'t Specify parameter for script')
 
     # Initialize the Scrapper
-    scrapper = Scrapper(category=Category, print_err_trace=False)
+    scrapper = Scrapper(category=Category, print_err_trace=True)
 
     # Get ALL Proxies According to your Choice
     data = scrapper.getProxies()
