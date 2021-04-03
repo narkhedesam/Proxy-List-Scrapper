@@ -122,7 +122,6 @@ class Scrapper:
         """
         try:
             r = requests.get(url=self.Categories[self.category])
-            print(r.text)
             if self.category == 'SPYS.ME' or self.category == 'proxyscrape':
                 self.proxies = findall(r'\d+\.\d+\.\d+\.\d+:\d+', r.text)
             elif self.category == 'PROXYNOVA':
