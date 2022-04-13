@@ -52,7 +52,7 @@ class Proxy(object):
         Proxy is the class for proxy.
     """
 
-    def __init__(self, ip, port):
+    def __init__(self, ip, port, type):
         """
         Initialization of the proxy class
         :param ip: ip address of proxy
@@ -60,6 +60,7 @@ class Proxy(object):
         """
         self.ip = ip
         self.port = port
+        self.type = type
 
 
 class Scrapper:
@@ -112,7 +113,7 @@ class Scrapper:
         else:
             self.proxies = self._get()
 
-        self.proxies = [Proxy(proxy.split(':')[0], proxy.split(':')[1]) for proxy in self.proxies]
+        self.proxies = [Proxy(proxy.split(':')[0], proxy.split(':')[1], proxy.split(':')[2]) for proxy in self.proxies]
         return Proxies(proxies=self.proxies, category=self.category)
 
     def _get(self):
@@ -123,20 +124,26 @@ class Scrapper:
         try:
             r = requests.get(url=self.Categories[self.category])
             if self.category == 'SPYS.ME' or self.category == 'proxyscrape':
-                self.proxies = findall(r'\d+\.\d+\.\d+\.\d+:\d+', r.text)
+                # prox_type = "miscellaneous"
+                _scrapped_proxies_text = findall(r'\d+\.\d+\.\d+\.\d+:\d+ [a-zA-Z- +!]*', r.text)
+                self.proxies = [findall(r'\d+\.\d+\.\d+\.\d+:\d+', m)[0] + ":" + ("https" if "-S" in m else "http") for m in _scrapped_proxies_text]
             elif self.category == 'PROXYNOVA':
                 matches = findall(
                     r'\d+\.\d+\.\d+\.\d+\'\)\;</script>\s*</abbr>\s*</td>\s*<td\salign=\"left\">\s*\d+',
                     r.text)
-                self.proxies = [sub(r"\'\)\;</script>\s*</abbr>\s*</td>\s*<td\salign=\"left\">\s*", ":", m) for m in
+                prox_type = "miscellaneous"
+                self.proxies = [sub(r"\'\)\;</script>\s*</abbr>\s*</td>\s*<td\salign=\"left\">\s*", ":", m) + ':'+prox_type for m in
                                 matches]
             elif self.category in {'PROXYLIST_DOWNLOAD_HTTP', 'PROXYLIST_DOWNLOAD_HTTPS',
                                  'PROXYLIST_DOWNLOAD_SOCKS4', 'PROXYLIST_DOWNLOAD_SOCKS5'}:
-                matches = findall(r'\d+\.\d+\.\d+\.\d+</td>\s*<td>\d+', r.text)
-                self.proxies = [sub(r"</td>\s*<td>", ":", m) for m in matches]
+                without_whitespace_text = r.text.replace(" ","").replace("\n","");
+                prox_type = 'PROXYLIST_DOWNLOAD_HTTP'.split("_")[-1].lower();
+                matches = findall(r'\d+\.\d+\.\d+\.\d+</td>\s*<td>\d+', without_whitespace_text)
+                self.proxies = [sub(r"</td>\s*<td>", ":", m) + ':'+prox_type for m in matches]
             else:
+                prox_type = "miscellaneous"
                 matches = findall(r'\d+\.\d+\.\d+\.\d+</td><td>\d+', r.text)
-                self.proxies = [m.replace('</td><td>', ':') for m in matches]
+                self.proxies = [m.replace('</td><td>', ':') + ':'+prox_type for m in matches]
             return self.proxies
         except ConnectionError:
             print('Connection Error in getting SSL Proxies')
@@ -162,7 +169,7 @@ __version__ = "0.1.0"
 if __name__ == "__main__":
     # By default set ALL for the parameter to get ALL Proxies
     Category = 'ALL'
-
+    Category = 'SPYS.ME'
     try:
         # get an parameter from command line
         Category = sys.argv[1]
@@ -179,7 +186,7 @@ if __name__ == "__main__":
     # Print These Scrapped Proxies
     print("Scrapped Proxies:")
     for item in data.proxies:
-        print('{}:{}'.format(item.ip, item.port))
+        print('{} - {}:{}'.format(item.type, item.ip, item.port))
 
     # Print the size of proxies scrapped
     print("Total Proxies")
