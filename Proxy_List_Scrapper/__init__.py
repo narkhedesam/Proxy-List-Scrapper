@@ -67,7 +67,7 @@ class Scrapper:
     Scrapper class is use to scrape the proxies from various websites.
     """
 
-    def __init__(self, category='ssl', print_err_trace=True):
+    def __init__(self, category='SSL', print_err_trace=True):
         """
         Initialization of scrapper class
         :param category: Category of proxy to scrape.
